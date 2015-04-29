@@ -4,10 +4,10 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Tutorial sencillo de AngularJS</title>
+        <title>AngularJS Basics</title>
 
-        <meta name="description" content="Introducción a AngularJS">
-        <meta name="author" content="David Rubert">
+        <meta name="description" content="AngularJS Basics">
+        <meta name="author" content="Carlos Rojas">
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -37,70 +37,68 @@
 
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
-                <section>
-                    <img class="logo" src="images/logo.png" />
-                    <div style="margin-left: 3em;">
-                        <h1 style="font-size: 2.8em">AngularJS</h1>
-                        <h3>Introducción y primeros pasos</h3>
-                        <p>
-                            <small><a href="">+ David Rubert</a> / <a href="http://twitter.com/tombatossals">@tombatossals</a></small>
+                <section data-background="images/angular-bg.png">
+                    <div style="margin-left: 3em; color:white">
+                        <h1 style="font-size: 2.8em; color:white">AngularJS</h1>
+                        <h3 style="color:white">Introducción y primeros pasos</h3>
+                        <p style="color:white">
+                            Carlos Rojas / <a style="color:white" href="http://twitter.com/carlosrojas_o">@carlosrojas_o</a>
                         </p>
-                        <h4 class="pdf"><img src="images/pdf.64.png" /> <a href="?print-pdf">Guardar como PDF</a></h4>
                     </div>
                 </section>
 
-                <section data-background="#4d7e65" class="white">
+                <section data-background="#333745" class="white">
                     <h2>Qué es AngularJS</h2>
                     <p>
-                        Una tecnología nueva en la capa de cliente que nos permite realizar cosas chachis en nuestras páginas sin necesidad de montar jaleos de código. Separa muy bien la responsabilidad de cada tecnología en su ámbito: CSS, HTML y Javascript, y las comunica cuando lo considera necesario.
+                        Una tecnología nueva en la capa de cliente que nos permite realizar cosas bien avanzadas en nuestras páginas sin necesidad de montar grandes cantidades de codigo. Separa muy bien la responsabilidad de cada tecnología en su ámbito: CSS, HTML y Javascript, y las comunica cuando lo considera necesario.
                     <p>
                 </section>
 
-                <section class="white left" data-background="#007777">
+                <section class="white left" data-background="#F6F792">
                     <section>
                         <h2>Por qué AngularJS</h2>
-                        <p style="margin-top: 2em;"><strong>Característica principal.</strong> No manosees el árbol DOM para acceder al valor de un elemento.</p>
+                        <p style=" color:black"><strong>Característica principal.</strong> No manosees el árbol DOM para acceder al valor de un elemento.</p>
                         <pre>
                             <code>
-// Esto noooooo por favoooor!
-var titulo = $("#elem").up("li").first("p").down("span.olala").val();
+ // Esto noooooo por favoooor!
+ var titulo = $("#elem").up("li").first("p").down("span.olala").val();
 
-// Esto se ve mejor :)
-var titulo = $scope.titulo;
+ // Esto se ve mejor :)
+ var titulo = $scope.titulo;
                             </code>
                         </pre>
                     </section>
                     <section>
                         <h2>Por qué AngularJS</h2>
-                        <p>Esto se consigue actualizando la vista automáticamente cuando cambia el modelo, o viceversa. <strong>Two-way data binding.</strong></p>
+                        <p style="color:black">Esto se consigue actualizando la vista automáticamente cuando cambia el modelo, o viceversa. <strong>Two-way data binding.</strong></p>
                         <img style="width: 500px; float: right;" src="images/twoway.png" />
                     </section>
                     <section>
                         <h2>Por qué AngularJS</h2>
-                        <p>Disponemos de plantillas que extienden el vocabulario del código HTML para proporcionarnos la introducción de lógica en la representación de nuestra información.</p>
+                        <p style="color:black">Disponemos de plantillas que extienden el vocabulario del código HTML para proporcionarnos la introducción de lógica en la representación de nuestra información.</p>
                         <pre>
                             <code>
-&lt;div ng-controller="AlbumCtrl"&gt;
-  &lt;ul&gt;
-    &lt;li ng-repeat="image in images"&gt;
-      &lt;img ng-src="{{image.thumbnail}}" alt="{{image.description}}"&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
+ &lt;div ng-controller="AlbumCtrl"&gt;
+    &lt;ul&gt;
+    &lt;li ng-repeat="image in images"&gt;
+      &lt;img ng-src="{{image.thumbnail}}" alt="{{image.description}}"&gt;
+    &lt;/li&gt;
+    &lt;/ul&gt;
+ &lt;/div&gt;
                             </code>
                         </pre>
                     </section>
                     <section>
                         <h2>Por qué AngularJS</h2>
-                        <ol start="3">
-                            <li><strong>Reausability</strong>. Permite crear componentes (directivas) fácilmente reutilizables (que permiten aislar totalmente su función, no chocan con otros).</li>
+                        <ul style="color:black">
+                            <li><strong>Reusability</strong>. Permite crear componentes (directivas) fácilmente reutilizables (que permiten aislar totalmente su función, no chocan con otros).</li>
                             <li><strong>Testing</strong>. Al tener componentes aislados, podemos testear su comportamiento de manera independiente.</li>
                             <li><strong>Inyección de dependencias</strong>. Si necesitamos hacer uso de un servicio, lo inyectamos en nuestro controlador directamente y funciona.</li>
-                        <ol>
+                        <ul>
                     </section>
                 </section>
 
-                <section class="white left" data-background="#007777">
+                <section class="white left" data-background="#77C4D3">
                     <section>
                         <h2>Vocabulario</h2>
                         <p>
@@ -158,27 +156,23 @@ var titulo = $scope.titulo;
                 </section>
 
                 <section class="fullscreen">
-                    <section data-background="images/wait.jpg">
-                    </section>
-                    <section data-background="images/slowly.jpg">
-                        <h1>Let's go slowly inside the code!</h1>
+                    <section data-background="images/what.gif">
                     </section>
                 </section>
 
                 <section>
-                    <section>
-                        <h1 style="line-height: 3em; font-weight: bold;">Paso 1</h1>
-                        <h2>Montando la infraestructura</h2>
-                        <img class="logo" src="images/logo.png" />
+                    <section data-background="images/angular-bg.png">
+                        <h1 style="line-height: 3em; font-weight: bold; color:white">Paso 1</h1>
+                        <h2 style="color:white">Montando la infraestructura</h2>
                     </section>
-                    <section>
+                    <section data-background="#d44557" >
                         <pre>
                             <code>
-$ git clone https://github.com/tombatossals/angularjs-tutorial
-$ git checkout phase1
+$ git clone https://github.com/BootcampWithUS/angularbasics.git
+$ git checkout paso_1
                             </code>
                         </pre>
-                        <ul>
+                        <ul style="color:white">
                             <li><strong>ng-app</strong></li>
                             <li><strong>ng-controller</strong></li>
                             <li><strong>ng-model</strong></li>
@@ -189,19 +183,19 @@ $ git checkout phase1
                 </section>
 
                 <section>
-                    <section>
-                        <h1 style="line-height: 3em; font-weight: bold;">Paso 2</h1>
-                        <h2>Más directivas y servicios</h2>
-                        <img class="logo" src="images/logo.png" />
+                    <section data-background="images/angular-bg.png">
+                        <h1 style="line-height: 3em; font-weight: bold; color:white">Paso 2</h1>
+                        <h2 style="color:white">Más directivas y servicios</h2>
+
                     </section>
-                    <section>
+                    <section data-background="#d44557">
                         <pre>
                             <code>
-$ git clone https://github.com/tombatossals/angularjs-tutorial
-$ git checkout phase2
+$ git clone https://github.com/BootcampWithUS/angularbasics.git
+$ git checkout paso_2
                             </code>
                         </pre>
-                        <ul>
+                        <ul style="color:white">
                             <li><strong>Filtro number</strong>. Números decimales.</li>
                             <li><strong>ng-cloak</strong>. Esperar antes de renderizar la plantilla.</li>
                             <li><strong>Watches</strong>. Inspeccionando variables del modelo.</li>
