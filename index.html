@@ -23,7 +23,7 @@
           <div class="form-group" ng-show="name">
             <label>Numero:</label>
             <input type="text" ng-model="number" class="form-control" placeholder="Tu Numero" min="0">
-            <div ng-show="numberError" class="alert alert-danger" role="alert">Bad number</div>
+            <div ng-cloak ng-show="numberError" class="alert alert-danger" role="alert">Bad number</div>
           </div>
         </form>
       </div>
